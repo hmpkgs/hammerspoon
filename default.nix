@@ -1,6 +1,7 @@
 { config, pkgs, lib, ... }:
 
 with import <home-manager/modules/lib/dag.nix> { inherit lib; };
+with lib;
 
 let
   cfg = config.programs.hammerspoon;
@@ -27,7 +28,7 @@ in {
       initFile  = mkOption {
         type = types.path;
         description = "The init.lua file to use";
-      }
+      };
     };
   };
 
